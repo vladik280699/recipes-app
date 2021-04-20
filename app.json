@@ -5,8 +5,6 @@
     "name": "recipes-app",
     "slug": "recipes-app",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"]
   }
 }

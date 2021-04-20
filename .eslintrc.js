@@ -3,24 +3,20 @@ module.exports = {
   extends: [
     '@react-native-community/eslint-config',
     'standard-with-typescript',
-    'eslint-config-prettier'
+    'eslint-config-prettier',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: [
-    '@typescript-eslint',
-    'react',
-    'react-native'
-  ],
-  'parserOptions': {
-    'ecmaFeatures': {
-      'jsx': true
+  plugins: ['@typescript-eslint', 'react', 'react-native'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    'project': './tsconfig.json'
+    project: './tsconfig.json',
   },
-  'env': {
-    'react-native/react-native': true
+  env: {
+    'react-native/react-native': true,
   },
-  'rules': {
-    'prettier/prettier': 'off'
-  }
+  rules: {
+    'prettier/prettier': 'off',
+  },
 }

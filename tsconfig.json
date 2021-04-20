@@ -3,9 +3,5 @@
   "compilerOptions": {
     "strict": true
   },
-  "include": [
-    "./**/*",
-    "./*",
-    ".eslintrc.js"
-  ]
+  "include": ["./**/*", "./*", ".eslintrc.js"]
 }
