@@ -8,7 +8,8 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "expo": "~41.0.0",
@@ -39,7 +40,8 @@
     "eslint-plugin-react": "^7.23.2",
     "jest-expo": "~41.0.0",
     "prettier": "^2.2.1",
-    "typescript": "~4.0.0"
+    "typescript": "~4.0.0",
+    "husky": "^6.0.0"
   },
   "jest": {
     "preset": "react-native"
