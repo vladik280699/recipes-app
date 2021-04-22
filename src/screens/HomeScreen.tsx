@@ -1,12 +1,14 @@
 import React from 'react'
 import { FlatList, View } from 'react-native'
+import { useSelector } from 'react-redux'
 
-import { recipes, Recipe } from '../../data/recipes'
+import { Recipe } from '../services/store/types'
+import { getRecipes } from '../services/store/selectors'
 import RecipeCard from '../components/RecipeCard/RecipeCard'
 
-const a = 1
-
 const HomeScreen: React.FC = () => {
+  const recipes = useSelector(getRecipes)
+
   const renderRecipes = ({ item }: { item: Recipe }) => (
     <RecipeCard item={item} />
   )
