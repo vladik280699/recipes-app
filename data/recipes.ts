@@ -1,4 +1,4 @@
-import {Recipe} from '../src/services/store/types'
+import { Recipe } from '../src/services/store/types'
 
 export const recipes: Recipe[] = [
   {

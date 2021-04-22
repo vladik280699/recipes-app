@@ -1,7 +1,7 @@
 import { createReducer } from 'typesafe-actions'
 
-import {recipes} from '../../../data/recipes'
-import {Recipe} from './types'
+import { recipes } from '../../../data/recipes'
+import { Recipe } from './types'
 
 export interface ReducerState {
   recipes: Recipe[]

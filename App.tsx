@@ -7,7 +7,7 @@ import HomeScreen from './src/screens/HomeScreen'
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-          <HomeScreen/>
+      <HomeScreen />
     </Provider>
   )
 }
