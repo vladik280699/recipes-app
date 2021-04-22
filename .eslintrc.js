@@ -11,7 +11,10 @@ const jsRules = {
   'no-fallthrough': 'error',
   'no-trailing-spaces': 'error',
   'no-var': 'error',
-  'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
+  'no-unused-expressions': [
+    'error',
+    { allowShortCircuit: true, allowTernary: true },
+  ],
   'object-shorthand': 'error',
   'prefer-const': 'error',
   quotes: ['error', 'single', { avoidEscape: true }],
