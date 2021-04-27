@@ -1,16 +1,20 @@
 import { createReducer } from 'typesafe-actions'
 
-import { recipes } from '../../../data/recipes'
 import { Recipe } from './types'
+import * as actions from './actions'
 
 export interface ReducerState {
   recipes: Recipe[]
 }
 
 const initialState: ReducerState = {
-  recipes,
+  recipes: [],
 }
 
 const reducer = createReducer(initialState)
+  .handleAction(actions.setRecipes, (state, { payload }) => ({
+    ...state,
+    recipes: payload,
+  }))
 
 export default reducer
