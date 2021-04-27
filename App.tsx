@@ -3,11 +3,12 @@ import { Provider } from 'react-redux'
 
 import store from './src/services/store/store'
 import HomeScreen from './src/screens/HomeScreen'
+import CategoriesScreen from './src/screens/CategoriesScreen'
 
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <HomeScreen />
+      <CategoriesScreen />
     </Provider>
   )
 }

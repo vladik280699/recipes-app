@@ -8,3 +8,9 @@ export interface Recipe {
   ingredients: any[]
   description: string
 }
+
+export interface Category {
+  id: number
+  name: string
+  photo_url: string
+}
