@@ -14,11 +14,11 @@ const initialState: ReducerState = {
 }
 
 const reducer = createReducer(initialState)
-  .handleAction(actions.setRecipes, (state, { payload }) => ({
+  .handleAction(actions.getRecipesSuccess, (state, { payload }) => ({
     ...state,
     recipes: payload,
   }))
-  .handleAction(actions.setCategories, (state, { payload }) => ({
+  .handleAction(actions.getCategoriesSuccess, (state, { payload }) => ({
     ...state,
     categories: payload,
   }))

@@ -2,21 +2,17 @@ import React, { useEffect } from 'react'
 import { FlatList, View } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { Recipe } from '../services/store/types'
 import { getRecipes } from '../services/store/selectors'
-import { setRecipes } from '../services/store/actions'
+import { getRecipesRequest } from '../services/store/actions'
 import RecipeCard from '../components/RecipeCard/RecipeCard'
-import { fetchRecipes } from '../services/api'
 
 const HomeScreen: React.FC = () => {
   const recipes = useSelector(getRecipes)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    fetchRecipes().then((recipes: Recipe[]) => {
-      dispatch(setRecipes(recipes))
-    })
-  }, [fetchRecipes])
+    dispatch(getRecipesRequest())
+  }, [getRecipesRequest])
 
   return (
     <View>
