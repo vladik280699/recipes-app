@@ -11,15 +11,15 @@ import { Category, Recipe } from './types'
 export const fetchRecipesEpic = (action$) =>
   action$.pipe(
     filter(isActionOf(actions.getRecipesRequest)),
-    mergeMap(() => {
+    mergeMap(({ meta }) => {
       return ajax(api.fetchRecipes()).pipe(
         pluck('response'),
         map((recipes: Recipe[]) => {
-          return actions.getRecipesSuccess(recipes)
+          return actions.getRecipesSuccess(recipes, meta)
         }),
         catchError((error) => {
           console.error(error)
-          return of(actions.getRecipesFailure())
+          return of(actions.getRecipesFailure(undefined, meta))
         })
       )
     })
@@ -28,15 +28,15 @@ export const fetchRecipesEpic = (action$) =>
 export const fetchCategoriesEpic = (action$) =>
   action$.pipe(
     filter(isActionOf(actions.getCategoriesRequest)),
-    mergeMap(() => {
+    mergeMap(({ meta }) => {
       return ajax(api.fetchCategories()).pipe(
         pluck('response'),
         map((categories: Category[]) => {
-          return actions.getCategoriesSuccess(categories)
+          return actions.getCategoriesSuccess(categories, meta)
         }),
         catchError((error) => {
           console.error(error)
-          return of(actions.getCategoriesFailure())
+          return of(actions.getCategoriesFailure(undefined, meta))
         })
       )
     })

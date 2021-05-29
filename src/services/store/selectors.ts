@@ -1,4 +1,7 @@
-import { ReducerState } from './reducer'
+import { compose } from 'redux'
+import { RootState } from './store'
 
-export const getRecipes = (state: ReducerState) => state.recipes
-export const getCategories = (state: ReducerState) => state.categories
+export const root = (state: RootState) => state.rootReducer
+
+export const getRecipes = compose(({ recipes }) => recipes, root)
+export const getCategories = compose(({ categories }) => categories, root)

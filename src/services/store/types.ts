@@ -1,3 +1,7 @@
+export interface BaseMeta {
+  operationUuid: string
+}
+
 export interface Recipe {
   recipeId: number
   categoryId: number

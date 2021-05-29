@@ -1,10 +1,19 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { createEpicMiddleware } from 'redux-observable'
+import { StateType } from 'typesafe-actions'
 
-import reducer from './reducer'
+import loadingReducer from '../loading/loading.reducer'
+import rootReducer from './reducer'
 import epic from './epic'
 
 const epicMiddleware = createEpicMiddleware()
+
+const reducer = combineReducers({
+  rootReducer,
+  loadingReducer,
+})
+
+export type RootState = StateType<typeof rootReducer>
 
 const store = createStore(reducer, applyMiddleware(epicMiddleware))
 
