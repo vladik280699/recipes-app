@@ -1,26 +1,14 @@
-import { createReducer } from 'typesafe-actions'
+import { combineReducers } from 'redux'
+import { StateType } from 'typesafe-actions'
 
-import { Recipe, Category } from './types'
-import * as actions from './actions'
+import recipes from '../recipes/recipes.reducer'
+import categories from '../categories/categories.reducer'
+import loading from '../loading/loading.reducer'
 
-export interface ReducerState {
-  recipes: Recipe[]
-  categories: Category[]
-}
+export const rootReducer = combineReducers({
+  recipes,
+  categories,
+  loading,
+})
 
-const initialState: ReducerState = {
-  recipes: [],
-  categories: [],
-}
-
-const reducer = createReducer(initialState)
-  .handleAction(actions.getRecipesSuccess, (state, { payload }) => ({
-    ...state,
-    recipes: payload,
-  }))
-  .handleAction(actions.getCategoriesSuccess, (state, { payload }) => ({
-    ...state,
-    categories: payload,
-  }))
-
-export default reducer
+export type RootState = StateType<typeof rootReducer>

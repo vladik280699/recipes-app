@@ -1,20 +1,25 @@
 import React from 'react'
 import { TouchableHighlight } from 'react-native'
 
-import { Recipe } from '../../../data/recipes'
+import { Recipe } from '../../services/store/types'
 import { Container, Photo, Title, Category } from './RecipeCard.styles'
 
 interface Props {
   item: Recipe
+  onNavigate: (id: string) => void
 }
 
-const RecipeCard: React.FC<Props> = ({ item }) => {
+const RecipeCard: React.FC<Props> = ({ item, onNavigate }) => {
+  const { id, photo_url, title, categoryId } = item
   return (
-    <TouchableHighlight underlayColor="rgba(73,182,77,0.9)">
+    <TouchableHighlight
+      underlayColor="transparent"
+      onPress={() => onNavigate(id)}
+    >
       <Container>
-        <Photo source={{ uri: item.photo_url }} />
-        <Title>{item.title}</Title>
-        <Category>{item.categoryId}</Category>
+        <Photo source={{ uri: photo_url }} />
+        <Title>{title}</Title>
+        <Category>{categoryId}</Category>
       </Container>
     </TouchableHighlight>
   )

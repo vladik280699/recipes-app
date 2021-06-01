@@ -3,8 +3,11 @@ import { FlatList, View } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 
 import useLoading from '../hooks/useLoading'
-import { getCategories } from '../services/store/selectors'
-import { getCategoriesRequest, GET_CATEGORIES } from '../services/store/actions'
+import { getCategories } from '../services/categories/categories.selectors'
+import {
+  getCategoriesRequest,
+  GET_CATEGORIES,
+} from '../services/categories/categories.actions'
 import CategoryCard from '../components/CategoryCard/CategoryCard'
 import LoadingWrapper from '../components/LoadingWrapper/LoadingWrapper'
 

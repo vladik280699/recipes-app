@@ -5,6 +5,11 @@ export const fetchRecipes = () => ({
   method: 'GET',
 })
 
+export const fetchRecipeById = (id: string) => ({
+  url: `${baseApi}/recipes/${id}`,
+  method: 'GET',
+})
+
 export const fetchCategories = () => ({
   url: `${baseApi}/categories`,
   method: 'GET',

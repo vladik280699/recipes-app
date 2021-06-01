@@ -3,7 +3,7 @@ export interface BaseMeta {
 }
 
 export interface Recipe {
-  recipeId: number
+  id: string
   categoryId: number
   title: string
   photo_url: string

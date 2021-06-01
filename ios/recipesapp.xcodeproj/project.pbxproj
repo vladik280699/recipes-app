@@ -133,6 +133,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				AF7BF8C823CE838DA4182532 /* [CP] Copy Pods Resources */,
+				140F93297263795C5E50FE78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);

@@ -10,7 +10,7 @@ interface Props {
 
 const CategoryCard: React.FC<Props> = ({ item }) => {
   return (
-    <TouchableHighlight underlayColor="rgba(73,182,77,0.9)">
+    <TouchableHighlight underlayColor="transparent">
       <Container>
         <Photo source={{ uri: item.photo_url }} />
         <Name>{item.name}</Name>
