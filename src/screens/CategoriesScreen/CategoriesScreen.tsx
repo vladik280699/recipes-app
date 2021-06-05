@@ -2,14 +2,14 @@ import React, { useEffect } from 'react'
 import { FlatList, View } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 
-import useLoading from '../hooks/useLoading'
-import { getCategories } from '../services/categories/categories.selectors'
+import useLoading from '../../hooks/useLoading'
+import { getCategories } from '../../services/categories/categories.selectors'
 import {
   getCategoriesRequest,
   GET_CATEGORIES,
-} from '../services/categories/categories.actions'
-import CategoryCard from '../components/CategoryCard/CategoryCard'
-import LoadingWrapper from '../components/LoadingWrapper/LoadingWrapper'
+} from '../../services/categories/categories.actions'
+import CategoryCard from '../../components/CategoryCard/CategoryCard'
+import LoadingWrapper from '../../components/LoadingWrapper/LoadingWrapper'
 
 const CategoriesScreen: React.FC = () => {
   const categories = useSelector(getCategories)

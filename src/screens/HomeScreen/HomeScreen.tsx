@@ -3,14 +3,14 @@ import { FlatList, View } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigation } from '@react-navigation/native'
 
-import useLoading from '../hooks/useLoading'
-import { getRecipes } from '../services/recipes/recipes.selectors'
+import useLoading from '../../hooks/useLoading'
+import { getRecipes } from '../../services/recipes/recipes.selectors'
 import {
   getRecipesRequest,
   GET_RECIPES,
-} from '../services/recipes/recipes.actions'
-import RecipeCard from '../components/RecipeCard/RecipeCard'
-import LoadingWrapper from '../components/LoadingWrapper/LoadingWrapper'
+} from '../../services/recipes/recipes.actions'
+import RecipeCard from '../../components/RecipeCard/RecipeCard'
+import LoadingWrapper from '../../components/LoadingWrapper/LoadingWrapper'
 
 const HomeScreen: React.FC = () => {
   const recipes = useSelector(getRecipes)
