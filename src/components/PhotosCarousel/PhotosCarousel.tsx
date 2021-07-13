@@ -15,7 +15,7 @@ const CarouselContainer = styled(View)`
   min-width: 250px;
 `
 const ImageContainer = styled(View)`
-  flex: 1;
+  display: flex;
   justify-content: center;
   width: ${viewportWidth}px;
   height: 250px;

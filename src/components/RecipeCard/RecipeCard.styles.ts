@@ -11,7 +11,7 @@ const RECIPE_ITEM_HEIGHT = 150
 const RECIPE_ITEM_MARGIN = 20
 
 export const Container = styled(View)`
-  flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 20px;
@@ -34,7 +34,7 @@ export const Photo = styled(Image)`
 `
 
 export const Title = styled(Text)`
-  flex: 1;
+  display: flex;
   font-size: 17px;
   font-weight: bold;
   text-align: center;

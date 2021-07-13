@@ -3,10 +3,10 @@ import styled from 'styled-components/native'
 
 export const Container = styled(ScrollView)`
   background-color: white;
-  flex: 1;
+  display: flex;
 `
 export const InfoRecipeContainer = styled(View)`
-  flex: 1;
+  display: flex;
   margin: 25px;
   margin-top: 20px;
   justify-content: center;
@@ -14,7 +14,7 @@ export const InfoRecipeContainer = styled(View)`
 `
 
 export const InfoContainer = styled(View)`
-  flex: 1;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -51,7 +51,7 @@ export const Category = styled(Text)`
 `
 
 export const ViewIngredientsButton = styled(View)`
-  flex: 1;
+  display: flex;
   height: 50px;
   width: 270px;
   margin-top: 20px;

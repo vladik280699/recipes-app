@@ -6,6 +6,7 @@ import store from './src/services/store/store'
 import HomeScreen from './src/screens/HomeScreen/HomeScreen'
 import CategoriesScreen from './src/screens/CategoriesScreen/CategoriesScreen'
 import RecipeScreen from './src/screens/RecipeScreen/RecipeScreen'
+import IngredientsScreen from './src/screens/IngredientsScreen/IngredientsScreen'
 
 const Stack = createStackNavigator()
 
@@ -21,6 +22,7 @@ const App: React.FC = () => {
             options={{ headerTransparent: true }}
           />
           <Stack.Screen name="Categories" component={CategoriesScreen} />
+          <Stack.Screen name="Ingredients" component={IngredientsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

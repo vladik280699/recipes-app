@@ -2,7 +2,7 @@ import styled from 'styled-components/native'
 import { Text, View, Image } from 'react-native'
 
 export const Container = styled(View)`
-  flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px;
@@ -21,7 +21,7 @@ export const Photo = styled(Image)`
 `
 
 export const Name = styled(Text)`
-  flex: 1;
+  display: flex;
   font-size: 20px;
   font-weight: bold;
   text-align: center;

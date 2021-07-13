@@ -18,7 +18,7 @@ const CategoriesScreen: React.FC = () => {
 
   useEffect(() => {
     dispatch(getCategoriesRequest())
-  }, [getCategoriesRequest])
+  }, [dispatch])
 
   return (
     <View>

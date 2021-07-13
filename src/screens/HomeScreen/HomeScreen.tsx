@@ -20,7 +20,7 @@ const HomeScreen: React.FC = () => {
 
   useEffect(() => {
     dispatch(getRecipesRequest())
-  }, [getRecipesRequest])
+  }, [dispatch])
 
   const handleNavigateToRecipe = (id: string) =>
     navigation.navigate('Recipe', { id })

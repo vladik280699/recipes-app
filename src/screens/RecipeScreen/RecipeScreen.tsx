@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { TouchableHighlight } from 'react-native'
-import { useRoute } from '@react-navigation/native'
+import { useRoute, useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { getRecipeById } from '../../services/recipes/recipes.selectors'
@@ -32,10 +32,15 @@ const RecipeScreen: React.FC = () => {
   const dispatch = useDispatch()
   const item = useSelector((state: RootState) => getRecipeById(state, id))
   const isLoading = useLoading([GET_RECIPE_BY_ID])
+  const navigation = useNavigation()
+
+  const handleNavigateToIngredients = () => {
+    navigation.navigate('Ingredients', { recipeId: id })
+  }
 
   useEffect(() => {
     dispatch(getRecipeByIdRequest(id))
-  }, [getRecipeByIdRequest, id])
+  }, [id, dispatch])
 
   return (
     <LoadingWrapper isLoading={isLoading}>
@@ -57,7 +62,9 @@ const RecipeScreen: React.FC = () => {
           <InfoContainer>
             <TouchableHighlight underlayColor="transparent">
               <ViewIngredientsButton>
-                <ViewIngredientsButtonText>
+                <ViewIngredientsButtonText
+                  onPress={handleNavigateToIngredients}
+                >
                   View Ingredients
                 </ViewIngredientsButtonText>
               </ViewIngredientsButton>

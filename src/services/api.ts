@@ -14,3 +14,8 @@ export const fetchCategories = () => ({
   url: `${baseApi}/categories`,
   method: 'GET',
 })
+
+export const fetchIngredients = () => ({
+  url: `${baseApi}/ingredients`,
+  method: 'GET',
+})

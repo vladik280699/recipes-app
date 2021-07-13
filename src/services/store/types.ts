@@ -9,7 +9,7 @@ export interface Recipe {
   photo_url: string
   photosArray: string[]
   time: string
-  ingredients: any[]
+  ingredients: [number, string]
   description: string
 }
 
@@ -17,4 +17,11 @@ export interface Category {
   id: number
   name: string
   photo_url: string
+}
+
+export interface Ingredient {
+  ingredientId: number
+  name: string
+  photo_url: string
+  dose?: string
 }
